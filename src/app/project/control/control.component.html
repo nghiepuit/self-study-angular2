@@ -1,0 +1,17 @@
+<form class="navbar-form navbar-right" role="search">
+	<div class="form-group">
+		<label for="">Summary Type: </label>
+		<select #selectText (change)="settingText(selectText.value)" class="form-control" required="required">
+			<option value="0" selected="true">Small</option>
+			<option value="1">Medium</option>
+			<option value="2">Large</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label for="">Currency: </label>
+		<select #selectCurrency (change)="settingCurrency(selectCurrency.value)" class="form-control" required="required">
+			<option value="vnd">VNĐ</option>
+			<option value="usd">USD</option>
+		</select>
+	</div>
+</form>

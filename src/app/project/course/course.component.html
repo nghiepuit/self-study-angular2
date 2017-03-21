@@ -1,0 +1,20 @@
+{{ typeText + "-" + typeCurrency }}
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+	<div class="thumbnail">
+		<img style="width: 100%;max-height: 200px;" src="assets/images/course/{{ course.image }}" alt="{{ course.title }}">
+		<div class="caption">
+			<h3>{{ course.title }}</h3>
+			<p>
+				{{ course.description }}
+			</p>
+			<p>
+				<template ngFor let-category [ngForOf]="course.category">
+					<a href="#"><span class="label label-success">{{ category }}</span></a>
+				</template>
+			</p>
+			<p class="text-center">
+				<a href="#" class="btn btn-danger">{{ course.price }} USD</a>
+			</p>
+		</div>
+	</div>
+</div>

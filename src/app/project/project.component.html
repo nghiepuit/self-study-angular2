@@ -1,0 +1,15 @@
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<control (typeTextChange)="changeTypeText($event)" (typeCurrencyChange)="changeTypeCurrency($event)">
+		</control>
+		<div class="clearfix"></div>
+	</div>
+	<!-- list video -->
+	<div class="panel-body">
+		<div class="row">
+			<template ngFor let-course [ngForOf]="courses" >
+				<course [course]="course" [typeText]="typeText" [typeCurrency]="typeCurrency"></course>
+			</template>
+		</div>
+	</div>
+</div>
